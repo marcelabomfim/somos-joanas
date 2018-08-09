@@ -12,15 +12,15 @@
   <header class="header">
     <div class="header__links">
       <div class="menu">
-        <input type="checkbox" id="menu__input">
-        <label for="" class="menu__toggle"></label>
+        <input type="checkbox" class="menu__input" id="menu">
+        <label for="menu" class="menu__toggle"><span></span></label>
         <nav class="menu__nav">
           <ul class="menu__list">
             <div class="menu__box">
               <li class="menu__item">
                 <a href="#oquesomos" class="menu__item-link">O que somos</a>
               </li>
-              <li class="menu__item">
+              <li class="menu__item active">
                 <a href="#quemomos" class="menu__item-link">Quem somos</a>
               </li>
               <li class="menu__item">
@@ -63,11 +63,11 @@
           </div>
         </nav>
         <ul class="featured">
-          <li class="featured__item">
-            <a href="#movepas" class="featured__item-link featured__item-link--movepas">MOVEPAS</a>
+          <li class="featured__item active" data-type="movepas">
+            <a href="#movepas" class="featured__item-link">MOVEPAS</a>
           </li>
-          <li class="featured__item">
-            <a href="#somosjoanas" class="featured__item-link featured__item-link--joanas">Somos Joanas</a>
+          <li class="featured__item" data-type="joanas">
+            <a href="#somosjoanas" class="featured__item-link">Somos Joanas</a>
           </li>
         </ul>
       </div>
