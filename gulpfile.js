@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
+const imagemin = require('gulp-imagemin');
 
 // compile .scss to .css files
 gulp.task('sass', function() {
@@ -10,8 +11,15 @@ gulp.task('sass', function() {
     .pipe(browserSync.stream());
 });
 
+// minify images
+gulp.task('images', function() {
+  gulp.src('src/img/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('dist/img'))
+});
+
 // watch sass & serve
-gulp.task('serve', ['sass'], function() {
+gulp.task('serve', ['sass', 'images'], function() {
   browserSync.init({
     server: "./"
   });
