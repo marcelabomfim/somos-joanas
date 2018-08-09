@@ -13,6 +13,7 @@ body {
   position: fixed;
   top: 0;
   border-bottom: 1px solid $color-white;
+  z-index: 100;
 
   .menu {
     padding-left: $header-height;
@@ -84,7 +85,7 @@ body {
     }
 
     &__nav {
-      @include background-opacity($color-white, 0.95);
+      @include background-opacity($color-white, 0.98);
       @include transition(all);
       width: 100%;
       height: auto;
@@ -177,6 +178,8 @@ body {
     }
 
     .search {
+      margin-bottom: 15px;
+
       &__input {
         background-color: $color-gray-light;
         height: 28px;
