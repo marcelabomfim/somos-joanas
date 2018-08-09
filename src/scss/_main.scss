@@ -1,0 +1,13 @@
+.container {
+  width: 100%;
+  max-width: 1230px;
+  display: block;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+
+.clearfix:after {
+  content: '';
+  clear: both;
+  display: table;
+}
