@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Somos Joannas</title>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
   <link rel="stylesheet" href="dist/css/style.css">
 </head>
 <body>
@@ -123,10 +124,12 @@
         <div class="quemsomos__head">
           <h2>Quem somos?</h2>
         </div>
-        <div class="swiper-container" id="swiper-quemsomos">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="quemsomos__content">
+      </div>
+      <div class="swiper-container" id="swiper-quemsomos">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="quemsomos__content">
+              <div class="container">
                 <div class="quemsomos__content-head">
                   <h3>Mariana Negretti Pereira</h3>
                   <h4>Precidente Somos Joanas | Vice Presidente MOVEPAS</h4>
@@ -162,10 +165,25 @@
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex sit officia magnam fugit, repellendus aliquam tenetur perferendis amet!</p>
                   </div>
                 </div>
+                <div class="quemsomos__content-footer">
+                  <div class="container">
+                    <div class="quemsomos__content-footer-block">
+                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex sit officia magnam fugit, repellendus aliquam tenetur perferendis amet! Ullam provident culpa porro harum quasi eligendi recusandae.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="quemsomos__footer">
+        <div class="container">
+          <p>corpo docente</p>
+          <p><small>arraste para o lado para ver mais</small></p>
+        </div>
+      </div>
       </div>
     </section>
   </main>
@@ -173,5 +191,19 @@
   <footer>
 
   </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function () {
+      var swiperQuemSomos = new Swiper('#swiper-quemsomos', {
+        autoplay: false,
+        loop: true,
+        pagination: {
+          el: '#swiper-quemsomos .swiper-pagination',
+        },
+      });
+    });
+  </script>
 </body>
 </html>

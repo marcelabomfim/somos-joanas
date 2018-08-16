@@ -125,6 +125,8 @@
   }
 
   &__content {
+    overflow: hidden;
+
     &-head {
       padding-left: 250px;
 
@@ -229,7 +231,65 @@
 
     &-two {
       background: $color-gray-extra-light;
-      padding: 0 20px 20px 20px;
+      padding: 0 20px 40px 20px;
+    }
+
+    &-footer {
+      .container {
+        position: relative;
+      }
+
+      &-block {
+        width: 200px;
+        height: 120px;
+        display: block;
+        padding: 15px;
+        background: $color-movepas;
+        color: $color-white;
+        font-size: 12px;
+        line-height: 13px;
+        float: right;
+        margin-top: -35px;
+      }
+    }
+  }
+
+  &__footer {
+    margin-top: -65px;
+
+    p {
+      padding: 0 20px;
+      font-size: 18px;
+      line-height: 15px;
+      color: $color-gray;
+
+      small {
+        font-size: 10px;
+      }
+    }
+  }
+
+  #swiper-quemsomos {
+    .swiper-pagination {
+      width: 100%;
+      max-width: 1170px;
+      display: block;
+      margin: -40px auto 0 auto;
+      padding: 0 35px;
+      text-align: left;
+      position: inherit;
+      bottom: inherit;
+      left: inherit;
+
+      &-bullet {
+        width: 25px;
+        height: 25px;
+        background: $color-gray;
+
+        &-active {
+          background: $color-pink;
+        }
+      } 
     }
   }
 }
