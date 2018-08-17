@@ -424,3 +424,53 @@
     }
   }
 }
+
+
+/**************************** JOANNAAS */
+
+.profissionais {
+  margin-top: 60px;
+
+  &__left {
+    width: 30%;
+    height: auto;
+    display: block;
+    float: left;
+    border-right: 1px solid $color-gray-light;
+    padding-right: 30px;
+
+    h2 {
+      font-size: 50px;
+      font-weight: 500;
+      color: $color-gray-dark;
+    }
+
+    select {
+      width: 80%;
+      height: 40px;
+      display: block;
+      border: 1px solid $color-gray;
+      background: transparent;
+      border-radius: 40px;
+      padding: 10px 15px;
+      margin: 15px 0;
+      -webkit-appearance: inherit;
+      text-align-last: center;
+    }
+
+    .profissional {
+      width: 100%;
+      height: auto;
+      display: block;
+
+    }
+  }
+
+  &__right {
+    width: 70%;
+    height: auto;
+    display: block;
+    float: left;
+    padding-left: 30px;
+  }
+}
