@@ -426,9 +426,11 @@
 }
 
 
-/**************************** JOANNAAS */
+/**************************** PROFISSIONAIS */
 
 .profissionais {
+  width: 100%;
+  overflow: hidden;
   margin-top: 60px;
 
   &__left {
@@ -458,11 +460,129 @@
       text-align-last: center;
     }
 
+    .swiper {
+      position: relative;
+
+      &:before {
+        content: '';
+        width: 50vw;
+        height: calc(100% - 130px);
+        display: block;
+        background: $color-gray-dark;
+        position: absolute;
+        top: 0;
+        right: 25px;
+        border-top-right-radius: 30px;
+      }
+
+      .swiper-container {
+        padding-bottom: 20px;
+      }
+
+      .swiper-pagination-info {
+        font-size: 11px;
+      }
+
+      .swiper-pagination {
+        bottom: 0;
+        text-align: left;
+
+        &-bullet {
+          width: 10px;
+          height: 10px;
+          background: $color-gray;
+
+          &-active {
+            background: $color-green;
+          }
+        }
+      }
+    }
+
     .profissional {
       width: 100%;
       height: auto;
       display: block;
+      padding: 25px 0;
 
+      &__left {
+        width: 160px;
+        padding-right: 10px;
+        display: block;
+        float: left;
+
+        h3 {
+          font-size: 28px;
+          color: $color-green;
+          font-weight: 500;
+          line-height: 30px;
+          margin: 0 0 5px 0;
+        }
+
+        h4 {
+          font-size: 10px;
+          color: $color-gray;
+          text-transform: uppercase;
+          margin: 0 0 20px 0;
+        }
+      }
+
+      &__text {
+        & > * {
+          font-size: 14px;
+          color: $color-white;
+          line-height: 15px;
+        }
+      }
+
+      &__image {
+        width: 150px;
+        height: 150px;
+        display: block;
+        background: $color-gray;
+        margin: 0 0 10px 0;
+      }
+
+      &__social {
+        p {
+          font-size: 12px;
+          color: $color-gray;
+        }
+
+        li {
+          display: inline-block;
+          margin: 5px 5px 0 0;
+        }
+
+        .icon {
+          width: 28px;
+          height: 28px;
+          display: block;
+          border-radius: 50%;
+          background: $color-gray;
+        }
+      }
+
+      &__right {
+        width: 150px;
+        display: block;
+        float: left;
+      }
+    }
+
+    &-obs {
+      padding-top: 15px;
+
+      p {
+        font-size: 20px;
+        color: $color-gray-dark;
+
+        span {
+          display: block;
+          color: $color-green;
+          font-size: 24px;
+        }
+      }
     }
   }
 
@@ -472,5 +592,262 @@
     display: block;
     float: left;
     padding-left: 30px;
+
+    h2 {
+      width: 50%;
+      display: block;
+      float: left;
+      font-size: 55px;
+      color: $color-gray-dark;
+      font-weight: 500;
+    }
+  }
+
+  &__ativo {
+    width: 50%;
+    display: block;
+    float: left;
+
+    &-title {
+      display: block;
+      background: $color-green;
+      padding: 20px;
+      border-radius: 40px 0 0 40px;
+      position: relative;
+      font-size: 27px;
+      color: $color-white;
+
+      span {
+        width: 20px;
+        height: 20px;
+        display: block;
+        background: $color-gray-light;
+        border-radius: 50%;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin-top: -10px;
+      }
+
+      &:after {
+        content: '';
+        width: 50vw;
+        height: 100%;
+        display: block;
+        background: $color-green;
+        position: absolute;
+        top: 0;
+        left: 100%;
+      }
+    }
+
+    &-subtitle {
+      padding: 10px 0;
+      font-size: 18px;
+      font-weight: 500;
+      color: $color-gray-dark;
+      text-align: right;
+    }
+  }
+
+  &__list {
+    display: block;
+  }
+
+  &__item {
+    width: 100%;
+    height: auto;
+    padding: 12px 20px;
+    border-radius: 20px;
+    background: $color-gray-light;
+    margin: 20px 0;
+    cursor: pointer;
+
+    &.ativo {
+      padding: 30px 30px 20px 30px;
+      cursor: default;
+
+      .profissionais__item-title {
+        display: none;
+      }
+
+      .profissionais__item-content {
+        display: block;
+      }
+    }
+
+    &-content {
+      display: none;
+    }
+
+    &-title {
+      font-size: 14px;
+      position: relative;
+
+      span {
+        width: 20px;
+        height: 20px;
+        display: block;
+        background: $color-gray-dark;
+        border-radius: 50%;
+        position: absolute;
+        right: -6px;
+        top: -3px;
+      }
+    }
+
+    &-text {
+      font-size: 14px;
+    }
+
+    &-obs {
+      font-size: 10px;
+      color: $color-movepas;
+      width: 50%;
+      float: left;
+      margin-top: 15px;
+    }
+
+    &-envie {
+      width: 50%;
+      float: left;
+      padding-left: 30px;
+      margin-top: 10px;
+      position: relative;
+
+      p {
+        font-size: 25px;
+        color: $color-gray-dark;
+        font-weight: 500;
+        line-height: 30px;
+      }
+
+      a.button {
+        width: 230px;
+        height: auto;
+        display: block;
+        background: $color-green;
+        padding: 9px 10px;
+        border-radius: 30px;
+        text-align: center;
+        color: $color-white;
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: none;
+        position: absolute;
+        top: 30px;
+        left: 190px;
+      }
+    }
+  }
+}
+
+
+/**************************** FOOTER */
+
+.footer {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: $color-gray-dark;
+  margin-top: 60px;
+  padding: 30px 0;
+
+  &__left {
+    width: 70%;
+    display: block;
+    float: left;
+  }
+
+  &__right {
+    width: 30%;
+    display: block;
+    float: left;
+  }
+
+  h3 {
+    font-size: 25px;
+    color: $color-white;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 14px;
+    color: $color-white;
+    text-decoration: underline;
+  }
+
+  &__agradecimentos {
+    margin-bottom: 20px;
+
+    &-item {
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: top;
+    }
+
+    &-img {
+      width: 60px;
+      height: 60px;
+      display: inline-block;
+      background: $color-gray;
+      border-radius: 50%;
+      margin-right: -15px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__site {
+    &-item {
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: top;
+    }
+
+    h5 {
+      font-size: 12px;
+      color: $color-green;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+  }
+
+  form {
+    width: 100%;
+    height: auto;
+    position: relative;
+    
+    .input {
+      width: 100%;
+      height: 40px;
+      display: block;
+      background: $color-white;
+      border: 0;
+      border-radius: 15px;
+      padding: 10px 20px;
+      font-size: 14px;
+      color: $color-gray-dark;
+      margin-bottom: 15px;
+    }
+
+    textarea.input {
+      height: 120px;
+    }
+
+    .submit {
+      width: 85px;
+      height: 38px;
+      display: block;
+      background: #E34738;
+      border-radius: 30px;
+      color: $color-white;
+      font-size: 12px;
+      border: 0;
+      position: absolute;
+      bottom: 20px;
+      right: -40px;
+    }
   }
 }
